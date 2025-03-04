@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Add</a></li>
+            <li><a href="deletions.html">Delete</a></li>
+            <li><a href="messages.html">Messages</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="loginBtn">Sign In</button>
+            <h1 id="userDisplay"></h1>
+        </div>
+    </nav>
+    <div class="main-section">
+    <h2>Data Entry</h2>
+
+    <label for="entryType">Choose Entry Type:</label>
+    
+    <!--Select Entry Type-->
+    <select id="entryType">
+        <option value="none">Select an Entry Type</option>
+        <option value="blog">Blog Entry</option>
+        <option value="content">Other Content (TV, Movies, Books, Podcasts, Restaurants)</option>
+    </select>
+
+
+    <!--Blog Entry-->
+    <form id="blogForm" class="hidden">
+
+        <label for="blogTitle">Title:</label>
+        <input type="text" id="blogTitle" required>
+
+        <label for="blogDate">Date:</label>
+        <input type="date" id="blogDate" required>
+        <button id="setTodayBtn">Set to Today</button>
+
+        <label for="blogTags">Tags (comma-separated):</label>
+        <input type="text" id="blogTags">
+
+        <label for="blogContent">Main Content:  <span class="info-icon" data-tooltip="Bold: **text**, Italic: *text*, Underline: __text__, "><i class="fas fa-info-circle"></i></span></label>
+        
+        <textarea id="blogContent" required></textarea>
+
+        <label for="blogImage">Image Links (comma-separated):</label>
+        <input type="text" id="blogImage">
+        
+
+        <label for="blogIcon">External Link Icon:</label>
+        <select id="blogIcon">
+            <option value="">None</option>
+            <option value="fa-brands fa-spotify">Spotify</option>
+            <option value="fa-solid fa-file">Article</option>
+            <option value="fa-brands fa-youtube">Youtube</option>
+        </select>
+
+        <label for="blogExtLabel">External Link Label:</label>
+        <input type="text" id="blogExtLabel">
+
+        <label for="blogExtURL">External Link URL:</label>
+        <input type="url" id="blogExtURL">
+
+        <button type="submit" id="blogSubmitBtn">Submit Blog Entry</button>
+        <button id="clearBtn">Clear</button>
+    </form>
+
+    <!--Other Types of Entries-->
+    <form id="contentForm" class="hidden">
+        <label for="contentType">Data Type:</label>
+        <select id="contentType">
+            <option value="none">Select a Data Type</option>
+            <option value="book">Book</option>
+            <option value="tvshow">TV</option>
+            <option value="movie">Movie</option>
+            <option value="podcast">Podcast</option>
+            <option value="restaurant">Restaurant</option>
+        </select>
+
+        <label for="contentTitle">Title/Name:</label>
+        <input type="text" id="contentTitle" required>
+
+        <label for="contentImage">Image Link:</label>
+        <input type="text" id="contentImage" required>
+        <button id="storageBtn">Go to Image Upload</button>
+
+        <label for="contentDetails">Details:</label>
+        <textarea id="contentDetails" required></textarea>
+
+        <label for="contentExtLink">External Link:</label>
+        <input type="url" id="contentExtLink" required>
+
+        <!-- Fields that appear conditionally -->
+        <div id="bookFields" class="hidden">
+            <label for="bookAuthor">Author:</label>
+            <input type="text" id="bookAuthor" required>
+        </div>
+
+        <div id="movieTvFields" class="hidden">
+            <label for="contentStreaming">Streaming Platform:</label>
+            <select id="contentStreaming">
+                <option value="none">Select a Streaming Platform</option>
+                <option value="Disney+">Disney+</option>
+                <option value="Hulu">Hulu</option>
+                <option value="Netflix">Netflix</option>
+                <option value="Paramount+">Paramount+</option>
+                <option value="Max">Max</option>
+                <option value="Amazon Prime">Amazon Prime</option>
+                <option value="Peacock">Peacock</option>
+                <option value="Apple TV+">Apple TV+</option>
+            </select>
+
+            <label for="contentYears">Year/Years (enter range or specific year):</label>
+            <input type="text" id="contentYears" required>
+        </div>
+
+        <div id="restaurantFields" class="hidden">
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <label for="mapLink">Map Link:</label>
+            <input type="url" id="mapLink" required>
+
+            <label for="foodType">Type of Food:</label>
+            <input type="text" id="foodType" required>
+        </div>
+
+        <button type="submit">Submit Content</button>
+        <button id="clearBtn">Clear</button>
+    </form>
+
+    <p id="status"></p>
+</div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

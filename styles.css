@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #e0e0e0; /* Darker background for everything */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.main-section {
+    margin: 0 20px; /* Adds margin to left and right */
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6347; /* Bright navbar color */
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 2px -2px #000000;
+    height: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Right-side Navbar Content */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+#loginBtn {
+    background-color: #32cd32; /* Green background */
+    border: 2px solid #228b22; /* Darker green border */
+    font-size: 14px; /* Smaller font size */
+    padding: 6px 12px; /* Reduced padding */
+    margin-right: 15px; /* Space from the next element */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+#loginBtn:hover {
+    background-color: #228b22; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+#userDisplay {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #0000ff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #ff6347;
+    border: 2px solid #ff4500;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 2px -2px #000000;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+/* Form and Labels */
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 3px solid #ff6347;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Hidden fields */
+.hidden {
+    display: none;
+}
+
+/* Select box style */
+select {
+    background-color: #f0f8ff;
+    border: 2px solid #ff6347;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border: 2px solid #ff6347;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Headers */
+h1 {
+    font-size: 40px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Status Message */
+#status {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+/* Page Background */
+body {
+    background-image: url('https://www.example.com/retro-background.jpg'); /* Replace with your own background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Section Divider */
+hr {
+    border: 1px solid #ff6347;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Input Styling */
+input[type="text"], input[type="url"], input[type="date"], input[type="email"], input[type="password"] {
+    background-color: #ffffe0;
+    border: 2px solid #ff6347;
+    color: #333;
+}
+
+/* Icon Styling */
+select#blogIcon {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+.info-icon {
+    position: relative;
+    cursor: pointer;  /* Shows a pointer cursor to indicate interactivity */
+    text-decoration: underline;  /* Optional: for a more clickable appearance */
+  }
+  
+  /* Tooltip text */
+  .info-icon[data-tooltip]:hover::after {
+    content: attr(data-tooltip);  /* Use the text from the data-tooltip attribute */
+    position: absolute;
+    bottom: 100%;  /* Position the tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;  /* Dark background */
+    color: #fff;  /* White text */
+    padding: 8px;
+    border-radius: 5px;
+    white-space: pre-wrap;  /* Allows line breaks inside the tooltip */
+    word-wrap: break-word;  /* Ensures the text wraps if it's too long */
+    max-width: 250px;  /* Optional: Set a max width for the tooltip */
+    z-index: 9999;
+    font-size: 14px;  /* Adjust the font size if necessary */
+  }
+
+/* Adjust for mobile */
+@media (max-width: 600px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+    }
+
+    #blogForm, #contentForm {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+

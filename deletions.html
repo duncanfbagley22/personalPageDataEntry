@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Entries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Add</a></li>
+            <li><a href="deletions.html">Delete</a></li>
+            <li><a href="messages.html">Messages</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="loginBtn">Sign In</button>
+            <h1 id="userDisplay"></h1>
+        </div>
+    </nav>
+    <div class="main-section">
+    <h2>Delete Entries</h2>
+
+    <label for="deleteType">Choose Entry Type:</label>
+    <select id="deleteType">
+        <option value="none">Select an Entry Type</option>
+        <option value="blog">Blog</option>
+        <option value="book">Book</option>
+        <option value="movie">Movie</option>
+        <option value="podcast">Podcast</option>
+        <option value="restaurant">Restaurant</option>
+        <option value="tvshow">TV Show</option>
+    </select>
+
+    <label for="documentList">Select Document:</label>
+    <select id="documentList" disabled>
+        <option value="none">Select a Document</option>
+    </select>
+
+    <div id="documentDetails" class="hidden">
+        <h3>Document Details</h3>
+        <pre id="detailsDisplay"></pre>
+    </div>
+
+    <button id="deleteBtn" disabled>Delete Entry</button>
+    <p id="status"></p>
+</div>
+    <script type="module" src="delete.js"></script>
+</body>
+</html>
