@@ -95,7 +95,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Neue', 'Arial Rounded MT Bold', Arial, sans-serif;
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0px 4px 2px -2px #000000;
@@ -153,7 +153,7 @@ select {
 textarea {
     resize: vertical;
     min-height: 100px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Neue', 'Arial Rounded MT Bold', Arial, sans-serif;
     border: 2px solid #ff6347;
     border-radius: 5px;
     padding: 10px;
@@ -162,7 +162,7 @@ textarea {
 /* Headers */
 h1 {
     font-size: 40px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Neue', 'Arial Rounded MT Bold', Arial, sans-serif;
     margin-bottom: 10px;
 }
 
