@@ -104,8 +104,12 @@ document.getElementById("blogForm").addEventListener("submit", async function(ev
         tags: document.getElementById("blogTags").value.split(","),
         externalLink: { url: document.getElementById("blogExtURL").value, label: document.getElementById("blogExtLabel").value, icon: document.getElementById("blogIcon").value },
         content: document.getElementById("blogContent").value,
-        images: document.getElementById("blogImage").value.split(",")
-    };
+            };
+
+    const imagesValue = document.getElementById("blogImage").value;
+    if (imagesValue) {
+        blogData.images = imagesValue.split(",").map(img => img.trim());
+    }
     
     await setDoc(doc(db, "blogData", blogData.title), blogData);
     
